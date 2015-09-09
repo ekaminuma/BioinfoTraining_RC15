@@ -18,8 +18,8 @@
 |4回目補講  | [2015/5/25補講](150525sup.md)  11:00-12:00  |　|test  |
 |5回目  | [2015/6/8](150608.md)  11:00-12:00  |　| Biomart  |
 |6回目  | [2015/6/23](150623.md)(火)  11:00-12:00(22から変更しました15/5/25)  | 274-　| k-means, AIC/BIC   |
-|7回目  | [2015/7/6](150706.md)  11:00-12:00  |　| Cluster dendrogram,Silhouette plot  |
-|8回目  | [2015/7/21](150721.md)(火) 13:30-14:30 |282-285　| LDA,DecisionTree,SVM  |
+|7回目  | [2015/7/6](150706.md)  11:00-12:00  |　| Cluster dendrogram, Silhouette plot  |
+|8回目  | [2015/7/21](150721.md)(火) 13:30-14:30 |282-285　| LDA, DecisionTree, SVM  |
 |9回目  | [2015/8/3](150803.md)  11:00-12:00  | 286-290　| Naive Bayes, Bootstrapping, Cross-validation  |
 |10回目  | [2015/9/7](150907.md)  11:00-12:00  | 293-294 　|ROC curve, AUC  |
 
