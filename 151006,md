@@ -1,0 +1,545 @@
+```
+
+------Bioconductorのインストール-----------------
+※インストールに時間がかかりますので、早めに対応ください。
+
+> source("http://bioconductor.org/biocLite.R") 
+Installing package into ‘C:/Users/ekaminuma/Documents/R/win-library/3.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://bioconductor.org/packages/3.1/bioc/bin/windows/contrib/3.2/BiocInstaller_1.18.4.zip'
+Content type 'application/zip' length 114483 bytes (111 KB)
+downloaded 111 KB
+
+package ‘BiocInstaller’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\ekaminuma\AppData\Local\Temp\RtmpAjY8mT\downloaded_packages
+Bioconductor version 3.1 (BiocInstaller 1.18.4), ?biocLite for help
+> biocLite() 
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 3.1 (BiocInstaller 1.18.4), R version 3.2.2.
+Installing package(s) ‘Biobase’, ‘IRanges’, ‘AnnotationDbi’
+also installing the dependencies ‘BiocGenerics’, ‘S4Vectors’, ‘GenomeInfoDb’, ‘DBI’, ‘RSQLite’
+
+略
+
+trying URL 'http://bioconductor.org/packages/3.1/bioc/bin/windows/contrib/3.2/AnnotationDbi_1.30.1.zip'
+Content type 'application/zip' length 9453861 bytes (9.0 MB)
+downloaded 9.0 MB
+
+package ‘BiocGenerics’ successfully unpacked and MD5 sums checked
+略
+
+The downloaded binary packages are in
+	C:\Users\ekaminuma\AppData\Local\Temp\RtmpAjY8mT\downloaded_packages
+Old packages: 'manipulate', 'class', 'foreign', 'MASS', 'nlme', 'nnet', 'spatial'
+Update all/some/none? [a/s/n]: 
+
+
+
+> biocLite(c("GenomicFeatures", "AnnotationDbi")) 
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 3.1 (BiocInstaller 1.18.4), R version 3.2.2.
+Installing package(s) ‘GenomicFeatures’, ‘AnnotationDbi’
+also installing the dependencies ‘lambda.r’, ‘futile.options’, ‘futile.logger’, ‘snow’, ‘BiocParallel’, ‘bitops’, ‘zlibbioc’, ‘XML’, ‘Rsamtools’, ‘GenomicAlignments’, ‘GenomicRanges’, ‘RCurl’, ‘XVector’, ‘Biostrings’, ‘rtracklayer’, ‘biomaRt’
+
+略
+
+Old packages: 'manipulate', 'class', 'foreign', 'MASS', 'nlme', 'nnet', 'spatial'
+Update all/some/none? [a/s/n]: 
+n
+
+
+> biocLite
+function (pkgs = c("Biobase", "IRanges", "AnnotationDbi"), suppressUpdates = FALSE, 
+    suppressAutoUpdate = FALSE, siteRepos = character(), ask = TRUE, 
+    ...) 
+{
+    if (missing(pkgs)) 
+        pkgs <- pkgs[!pkgs %in% rownames(installed.packages())]
+    if (!suppressAutoUpdate && !.isCurrentBiocInstaller()) {
+        on.exit(.updateBiocInstaller(pkgs, ask = ask, suppressUpdates = suppressUpdates, 
+            siteRepos = siteRepos, ...))
+    }
+    else if ("BiocUpgrade" %in% pkgs) {
+        .biocUpgrade()
+    }
+    else {
+        .biocLiteInstall(pkgs, ask = ask, siteRepos = siteRepos, 
+            suppressUpdates = suppressUpdates, ...)
+    }
+}
+<environment: namespace:BiocInstaller>
+
+
+インストール先のダウンロードサイトを指定します。
+> chooseBioCmirror()
+HTTPS BioC mirror 
+
+1: 0-Bioconductor (World-wide) [https]
+2: Germany (Dortmund) [https]
+3: United Kingdom (Hinxton) [https]
+4: Japan (Wako) [https]
+5: China (Anhui) [https]
+6: (HTTP mirrors)
+
+Selection: 4
+
+> chooseCRANmirror()
+HTTPS CRAN mirror 
+
+ 1: 0-Cloud [https]             2: Austria [https]          
+ 3: Chile [https]               4: China (Beijing 4) [https]
+ 5: China (Hefei) [https]       6: Colombia (Cali) [https]  
+ 7: France (Lyon 2) [https]     8: Germany (Munster) [https]
+ 9: Iceland [https]            10: Russia (Moscow) [https]  
+11: Spain (A Coruna) [https]   12: Switzerland [https]      
+13: UK (Bristol) [https]       14: UK (Cambridge) [https]   
+15: USA (CA 1) [https]         16: USA (KS) [https]         
+17: USA (MI 1) [https]         18: USA (TN) [https]         
+19: USA (TX) [https]           20: USA (WA) [https]         
+21: (HTTP mirrors)             
+
+Selection: 
+ メニューから項目を入力するか、0 を入力して終了して下さい 
+Selection: 0
+
+
+
+
+-----[p.41]---------------------------------
+
+BioconductorのAnnotation Data Packageを試す。
+対象は、AffymetrixのHuman RNA解析Chip
+
+＜参考：AffymetrixサイトでのRNA解析アレイの分類＞
+
+3' IVT Expression Analysis   | Gene Regulation Analysis   | miRNA Analysis   | Whole-Transcript Expression Analysis & Profiling  
+
+----------------------------------------------------------------------------
+
+3'IVT Expression Analysis →　Human Genome U133A　Arrayのデータパッケージ「hgu133A」
+
+参考：BioConductorのページ
+
+> ?hgu133a.db  ヘルプで確認
+
+> biocLite("hgu133a.db") 
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 3.1 (BiocInstaller 1.18.4), R version 3.2.2.
+Installing package(s) ‘hgu133a.db’
+also installing the dependency ‘org.Hs.eg.db’
+
+installing the source packages ‘org.Hs.eg.db’, ‘hgu133a.db’
+
+trying URL 'http://bioconductor.org/packages/3.1/data/annotation/src/contrib/org.Hs.eg.db_3.1.2.tar.gz'
+Content type 'application/x-gzip' length 65439359 bytes (62.4 MB)
+downloaded 62.4 MB
+
+trying URL 'http://bioconductor.org/packages/3.1/data/annotation/src/contrib/hgu133a.db_3.1.3.tar.gz'
+Content type 'application/x-gzip' length 903355 bytes (882 KB)
+downloaded 882 KB
+
+* installing *source* package 'org.Hs.eg.db' ...
+** R
+** inst
+** preparing package for lazy loading
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+*** arch - x64
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+* DONE (org.Hs.eg.db)
+* installing *source* package 'hgu133a.db' ...
+** R
+** inst
+** preparing package for lazy loading
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+*** arch - x64
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+* DONE (hgu133a.db)
+
+The downloaded source packages are in
+	‘C:\Users\ekaminuma\AppData\Local\Temp\RtmpAjY8mT\downloaded_packages’
+Old packages: 'manipulate', 'class', 'foreign', 'MASS', 'nlme', 'nnet', 'spatial'
+Update all/some/none? [a/s/n]: 
+n
+
+
+
+> library("hgu133a.db")
+ 要求されたパッケージ AnnotationDbi をロード中です 
+ 要求されたパッケージ stats4 をロード中です 
+ 要求されたパッケージ BiocGenerics をロード中です 
+ 要求されたパッケージ parallel をロード中です 
+
+ 次のパッケージを付け加えます: ‘BiocGenerics’ 
+
+ 以下のオブジェクトは ‘package:parallel’ からマスクされています: 
+
+     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB 
+
+略
+
+
+
+アノテーションのうち、ENTRESIDのデータを利用する
+
+> ls("package:hgu133a.db")
+ [1] "hgu133a"              "hgu133a.db"           "hgu133a_dbconn"      
+ [4] "hgu133a_dbfile"       "hgu133a_dbInfo"       "hgu133a_dbschema"    
+ [7] "hgu133aACCNUM"        "hgu133aALIAS2PROBE"   "hgu133aCHR"          
+[10] "hgu133aCHRLENGTHS"    "hgu133aCHRLOC"        "hgu133aCHRLOCEND"    
+[13] "hgu133aENSEMBL"       "hgu133aENSEMBL2PROBE" "hgu133aENTREZID"     
+[16] "hgu133aENZYME"        "hgu133aENZYME2PROBE"  "hgu133aGENENAME"     
+[19] "hgu133aGO"            "hgu133aGO2ALLPROBES"  "hgu133aGO2PROBE"     
+[22] "hgu133aMAP"           "hgu133aMAPCOUNTS"     "hgu133aOMIM"         
+[25] "hgu133aORGANISM"      "hgu133aORGPKG"        "hgu133aPATH"         
+[28] "hgu133aPATH2PROBE"    "hgu133aPFAM"          "hgu133aPMID"         
+[31] "hgu133aPMID2PROBE"    "hgu133aPROSITE"       "hgu133aREFSEQ"       
+[34] "hgu133aSYMBOL"        "hgu133aUNIGENE"       "hgu133aUNIPROT"      
+
+
+> myMap<-hgu133aENTREZID 　MyMap変数に抽出
+
+> myMap
+ENTREZID map for chip hgu133a (object of class "ProbeAnnDbBimap")
+> 
+> summary(myMap)
+ENTREZID map for chip hgu133a (object of class "ProbeAnnDbBimap")
+|
+| Lkeyname: probe_id (Ltablename: probes)
+|    Lkeys: "1007_s_at", "1053_at", ... (total=22283/mapped=19846)
+|
+| Rkeyname: gene_id (Rtablename: genes)
+|    Rkeys: "1", "2", ... (total=56340/mapped=12434)
+|
+| direction: L --> R
+> mapped_probes<-mappedkeys(myMap)
+> summary(mapped_probes)
+   Length     Class      Mode 
+    19846 character character 
+
+> MyEntrez <- as.list(myMap[mapped_probes[1:5]])
+　　　リスト変数に1-5番目までのprobe番号に対応するEntrezIDをまとめる
+> MyEntrez　　EntrezID番号
+$`1053_at`
+[1] "5982"
+
+$`117_at`
+[1] "3310"
+
+$`121_at`
+[1] "7849"
+
+$`1255_g_at`
+[1] "2978"
+
+$`1316_at`
+[1] "7067"
+
+> MyEntrez[1]  　listエントリ1番目データへのアクセス
+$`1053_at`
+[1] "5982"
+
+> MyEntrez[[1]]  listエントリ1番目データの中身へアクセス
+[1] "5982"
+
+
+
+> d1 <- c()　空の変数作成
+> for (i in 1:3){ d1<- append(d1, MyEntrez[[i]]) }
+
+　　　appendを使ってd1に1～3までの値を入力
+> d1
+[1] "5982" "3310" "7849"
+
+
+
+
+
+-----[p.42]---------------------------------
+遺伝子シンボルからEntrezIDに変換する
+
+> biocLite("org.Hs.eg.db")
+BioC_mirror: https://bioconductor.riken.jp
+Using Bioconductor version 3.1 (BiocInstaller 略
+
+* installing *source* package 'org.Hs.eg.db' ...
+** R
+** inst
+** preparing package for lazy loading
+Creating a generic function for 'nchar' from p’
+Old packages: 'manipulate', 'class', 'foreign', 'MASS', 'nlme', 'nnet', 'spatial'
+Update all/some/none? [a/s/n]: 
+n
+
+> library(org.Hs.eg.db)
+
+
+> myEIDs<-c("1","10","100","1000","37690")
+> myEIDs
+[1] "1"     "10"    "100"   "1000"  "37690"
+> 
+
+
+> ls("package:org.Hs.eg.db")
+ [1] "org.Hs.eg"                "org.Hs.eg.db"            
+ [3] "org.Hs.eg_dbconn"         "org.Hs.eg_dbfile"        
+ [5] "org.Hs.eg_dbInfo"         "org.Hs.eg_dbschema"      
+ [7] "org.Hs.egACCNUM"          "org.Hs.egACCNUM2EG"      
+ [9] "org.Hs.egALIAS2EG"        "org.Hs.egCHR"            
+[11] "org.Hs.egCHRLENGTHS"      "org.Hs.egCHRLOC"         
+[13] "org.Hs.egCHRLOCEND"       "org.Hs.egENSEMBL"        
+[15] "org.Hs.egENSEMBL2EG"      "org.Hs.egENSEMBLPROT"    
+[17] "org.Hs.egENSEMBLPROT2EG"  "org.Hs.egENSEMBLTRANS"   
+[19] "org.Hs.egENSEMBLTRANS2EG" "org.Hs.egENZYME"         
+[21] "org.Hs.egENZYME2EG"       "org.Hs.egGENENAME"       
+[23] "org.Hs.egGO"              "org.Hs.egGO2ALLEGS"      
+[25] "org.Hs.egGO2EG"           "org.Hs.egMAP"            
+[27] "org.Hs.egMAP2EG"          "org.Hs.egMAPCOUNTS"      
+[29] "org.Hs.egOMIM"            "org.Hs.egOMIM2EG"        
+[31] "org.Hs.egORGANISM"        "org.Hs.egPATH"           
+[33] "org.Hs.egPATH2EG"         "org.Hs.egPFAM"           
+[35] "org.Hs.egPMID"            "org.Hs.egPMID2EG"        
+[37] "org.Hs.egPROSITE"         "org.Hs.egREFSEQ"         
+[39] "org.Hs.egREFSEQ2EG"       "org.Hs.egSYMBOL"         
+[41] "org.Hs.egSYMBOL2EG"       "org.Hs.egUCSCKG"         
+[43] "org.Hs.egUNIGENE"         "org.Hs.egUNIGENE2EG"     
+[45] "org.Hs.egUNIPROT"        
+
+
+
+> mySymbols<-mget(myEIDs,org.Hs.egSYMBOL,ifnotfound=NA)
+
+
+> mySymbols
+$`1`
+[1] "A1BG"
+
+$`10`
+[1] "NAT2"
+
+$`100`
+[1] "ADA"
+
+$`1000`
+[1] "CDH2"
+
+$`37690`
+[1] NA
+
+
+> y<-mySymbols[!is.na(mySymbols)]
+> y
+     1     10    100   1000 
+"A1BG" "NAT2"  "ADA" "CDH2" 
+> 
+
+> myEIDs<-mget(y,org.Hs.egSYMBOL2EG,ifnotfound=NA)      ※本と違うので注意
+> myEIDs
+$A1BG
+[1] "1"
+
+$NAT2
+[1] "10"
+
+$ADA
+[1] "100"
+
+$CDH2
+[1] "1000"
+
+
+----------[p.44]--------------------------------------------------------------------------
+Pathwayデータベース「KEGG」データを使う
+
+KEGG=パスウェイデータベースhttp://www.genome.jp/kegg/
+KEGG API パスウェイで見たい生物種の遺伝子(EC番号)のみ表示できるhttps://www.google.co.jp/search?q=KEGG+API&hl=ja&source=lnms&tbm=isch&sa=X&ved=0CAgQ_AUoAWoVChMIz-fmgOusyAIVYeKmCh0u_AlN&biw=1008&bih=632
+
+> biocLite("KEGG.db")
+BioC_mirror: https://bioconductor.riken.jp
+Using Bioconductor version 3.1 (BiocInstaller 1.18.4), R version 3.2.2.
+Installing package(s) ‘KEGG.db’
+installing the source package ‘KEGG.db’
+
+trying URL 'https://bioconductor.riken.jp/packages/3.1/data/annotation/src/contrib/KEGG.db_3.1.2.tar.gz'
+Content type 'application/x-gzip' length 1973395 bytes (1.9 MB)
+downloaded 1.9 MB
+
+* installing *source* package 'KEGG.db' ...
+** R
+** inst
+** preparing package for lazy loading
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+*** arch - x64
+Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+* DONE (KEGG.db)
+
+The downloaded source packages are in
+	‘C:\Users\ekaminuma\AppData\Local\Temp\RtmpAjY8mT\downloaded_packages’
+Old packages: 'manipulate', 'class', 'foreign', 'MASS', 'nlme', 'nnet', 'spatial'
+Update all/some/none? [a/s/n]: 
+n
+> library(KEGG.db)
+
+KEGG.db contains mappings based on older data because the original
+  resource was removed from the the public domain before the most recent
+  update was produced. This package should now be considered deprecated
+  and future versions of Bioconductor may not have it available.  Users
+  who want more current data are encouraged to look at the KEGGREST or
+  reactome.db packages
+
+> ?KEGG.db
+> ls("package:KEGG.db")
+ [1] "KEGG"             "KEGG_dbconn"      "KEGG_dbfile"      "KEGG_dbInfo"     
+ [5] "KEGG_dbschema"    "KEGGENZYMEID2GO"  "KEGGEXTID2PATHID" "KEGGGO2ENZYMEID" 
+ [9] "KEGGMAPCOUNTS"    "KEGGPATHID2EXTID" "KEGGPATHID2NAME"  "KEGGPATHNAME2ID" 
+
+
+
+
+
+> myEID <- unlist(mget(y, org.Hs.egSYMBOL2EG, ifnotfound=NA))
+> myEID<-as.character(myEID)> myEID
+[1] "1"    "10"   "100"  "1000"
+ 
+ 
+> kegg<-mget(myEID,KEGGEXTID2PATHID,ifnotfound=list(NA))
+
+             ＝＞Entrez(Gene)IDからKEGG PathwayIDにマップするオブジェクト
+
+> kegg
+$`1`
+[1] NA
+
+$`10`
+[1] "hsa00232" "hsa00983" "hsa01100"
+
+$`100`
+[1] "hsa00230" "hsa01100" "hsa05340"
+
+$`1000`
+[1] "hsa04514" "hsa05412"
+
+
+-----------------------------------------------
+
+KEGGのPathwayID番号からPathway名に変換
+
+> kegg[[2]]
+[1] "hsa00232" "hsa00983" "hsa01100"
+> kegg[[2]][1]
+[1] "hsa00232"
+
+
+> tmp1<-substr(kegg[[2]][1],4,8)  番号だけを抽出
+> tmp1
+[1] "00232"
+
+> mypath1<-unlist(mget(tmp1,KEGGPATHID2NAME,ifnotfound=list(NA)))
+　　　　　　
+
+＝＞KEGG PathwayIDからKEGG Pathway Nameにマップするオブジェクト
+
+
+> mypath1
+                00232 
+"Caffeine metabolism" 
+
+--------------------------------
+
+
+> biocLite("KEGGREST")
+BioC_mirror: https://bioconductor.riken.jp
+U
+downloaded 148 KB
+
+Old packages: 'manipulate', 'class', 'foreign', 'MASS', 'nlme', 'nnet',
+  'spatial'
+Update all/some/none? [a/s/n]: 
+n
+> library(KEGGREST)
+> genes<-keggGet("hsa:1045")
+> genes
+[[1]]
+[[1]]$ENTRY
+   CDS 
+"1045" 
+
+[[1]]$NAME
+[1] "CDX2, CDX-3, CDX2/AS, CDX3"
+
+[[1]]$DEFINITION
+[1] "(RefSeq) caudal type homeobox 2"
+
+[[1]]$ORTHOLOGY
+                K09312 
+"homeobox protein CDX" 
+
+[[1]]$ORGANISM
+                   hsa 
+"Homo sapiens (human)" 
+
+[[1]]$BRITE
+[1] "Transcription factors [BR:hsa03000]" " Eukaryotic Type"                   
+[3] "  Helix-turn-helix"                  "   Homeo domain only, Cad"          
+[5] "    1045 (CDX2)"                    
+
+[[1]]$POSITION
+[1] "13q12.3"
+
+[[1]]$MOTIF
+[1] "Pfam: Caudal_act Homeobox Homeobox_KN"
+
+[[1]]$DBLINKS
+[1] "NCBI-ProteinID: NP_001256" "NCBI-GeneID: 1045"        
+[3] "OMIM: 600297"              "HGNC: 1806"               
+[5] "HPRD: 02622"               "UniProt: Q99626"          
+
+[[1]]$AASEQ
+  A AAStringSet instance of length 1
+    width seq
+[1]   313 MYVSYLLDKDVSMYPSSVRHSGGLNLAPQNFVSP...EPLSPVSSLQASVSGSVPGVLGPTGGVLNPTVTQ
+
+[[1]]$NTSEQ
+  A DNAStringSet instance of length 1
+    width seq
+[1]   942 ATGTACGTGAGCTACCTCCTGGACAAGGACGTGA...TGGGGGGGTGCTAAACCCCACCGTCACCCAGTGA
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
