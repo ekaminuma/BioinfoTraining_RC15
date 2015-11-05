@@ -23,9 +23,9 @@
 |9回目  | [2015/8/3](150803.md)  11:00-12:00  | 286-292　| Naive Bayes, Bootstrapping, Cross-validation  |
 |10回目  | [2015/9/7](150907.md)  11:00-12:00  | 293-298 　|ROC curve, AUC  |
 |11回目  | [2015/10/6](151006.md)  11:00-12:00  | 37-46 　|Bioconductor, HGU133 Array, KEGG  |
-|12回目  | [2015/10/13(火)](151013.md)  13:30-14:30  | 46-48 　|Bioconductor, GO  |
-|13回目  | [2015/10/27](151027.md) 11:00-12:00(26日から変更しました) | 48-56 | Gene enrichment test(GO, KEGG pathway) |
-|14回目  | [2015/11/5](151105.md) 11:00-12:00(9日から変更しました) | 57-68 | GenBank, fasta, GC content |
+|12回目  | [2015/10/13](151013.md)(火)  13:30-14:30  | 46-48 　|Bioconductor, GO  |
+|13回目  | [2015/10/27](151027.md)(火) 11:00-12:00(26日から変更しました) | 48-56 | Gene enrichment test(GO, KEGG pathway) |
+|14回目  | [2015/11/5](151105.md)(木) 11:00-12:00(9日から変更しました) | 57-68 | GenBank, fasta, GC content |
 
 開催予定日
 
