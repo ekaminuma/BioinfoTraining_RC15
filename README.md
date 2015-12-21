@@ -28,11 +28,12 @@
 |14回目  | [2015/11/5](151105.md)(木) 11:00-12:00(9日から変更しました) | 57-68 | GenBank, fasta, GC content |
 |15回目  | [2015/11/24](151124.md)  11:00-12:00  | 69-80 　|Pairwise/Multiple sequence alignment, Phylogenetic analysis  |
 |16回目  | [2015/12/7](151207.md)  11:00-12:00  | 80-86 　|Blast results, Similarity matrix, Pattern finding  |
+|17回目  | [2015/12/7](151207.md)  11:00-12:00  | 80-86 　|Blast results, Similarity matrix, Pattern finding  |
 
 開催予定日
 
 - 17回目 2015/12/21  11:00-12:00
-- 18回目 2016/1/7　 11:00-12:00
+- 18回目 2016/1/8　 11:00-12:00
 - 19回目 2016/1/18　 11:00-12:00
 - 20回目 2016/2/1　 11:00-12:00
 - 21回目 2016/2/15　 11:00-12:00
