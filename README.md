@@ -28,7 +28,7 @@
 |14回目  | [2015/11/5](151105.md)(木) 11:00-12:00(9日から変更しました) | 57-68 | GenBank, fasta, GC content |
 |15回目  | [2015/11/24](151124.md)  11:00-12:00  | 69-80 　|Pairwise/Multiple sequence alignment, Phylogenetic analysis  |
 |16回目  | [2015/12/7](151207.md)  11:00-12:00  | 80-86 　|Blast results, Similarity matrix, Pattern finding  |
-|17回目  | [2015/12/7](151207.md)  11:00-12:00  | 80-86 　|Blast results, Similarity matrix, Pattern finding  |
+|17回目  | [2015/12/21](151221.md)  11:00-12:00  | 87-106 　| UniProt, Protein sequence alignment, PDB   |
 
 開催予定日
 
