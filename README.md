@@ -18,14 +18,14 @@
 |4回目補講  | [2015/5/25補講](150525sup.md)  11:00-12:00 | 1  | 23-25　| t検定, t統計量   |
 |5回目  | [2015/6/8](150608.md)  11:00-12:00 | 1  | 33-35 | Biomart  |
 |6回目  | [2015/6/23](150623.md)(火)  11:00-12:00(22から変更しました15/5/25) | 9  | 271-274　| k-means, AIC/BIC   |
-|7回目  | [2015/7/6](150706.md)  11:00-12:00  | 275-281 | 9　| Cluster dendrogram, Silhouette plot  |
-|8回目  | [2015/7/21](150721.md)(火) 13:30-14:30 |282-285 | 9　| LDA, DecisionTree, SVM  |
-|9回目  | [2015/8/3](150803.md)  11:00-12:00  | 286-292 | 9　| Naive Bayes, Bootstrapping, Cross-validation  |
-|10回目  | [2015/9/7](150907.md)  11:00-12:00  | 293-298 | 9 　|ROC curve, AUC  |
+|7回目  | [2015/7/6](150706.md)  11:00-12:00  | 9　| 275-281 |  Cluster dendrogram, Silhouette plot  |
+|8回目  | [2015/7/21](150721.md)(火) 13:30-14:30 | 9|282-285 　| LDA, DecisionTree, SVM  |
+|9回目  | [2015/8/3](150803.md)  11:00-12:00  | 9 | 286-292 　| Naive Bayes, Bootstrapping, Cross-validation  |
+|10回目  | [2015/9/7](150907.md)  11:00-12:00  | 9| 293-298  　|ROC curve, AUC  |
 |11回目  | [2015/10/6](151006.md)  11:00-12:00 |2  | 37-46 　|Bioconductor, HGU133 Array, KEGG  |
 |12回目  | [2015/10/13](151013.md)(火)  13:30-14:30 |2  | 46-48  　|Bioconductor, GO  |
 |13回目  | [2015/10/27](151027.md)(火) 11:00-12:00(26日から変更しました) |2 | 48-56 | Gene enrichment test(GO, KEGG pathway) |
-|14回目  | [2015/11/5](151105.md)(木) 11:00-12:00(9日から変更しました) | | 57-68 | GenBank, fasta, GC content |
+|14回目  | [2015/11/5](151105.md)(木) 11:00-12:00(9日から変更しました) |3 | 57-68 | GenBank, fasta, GC content |
 |15回目  | [2015/11/24](151124.md)  11:00-12:00  |3| 69-80 　|Pairwise/Multiple sequence alignment, Phylogenetic analysis  |
 |16回目  | [2015/12/7](151207.md)  11:00-12:00  |3 | 80-86 　|Blast results, Similarity matrix, Pattern finding  |
 |17回目  | [2015/12/21](151221.md)  11:00-12:00   |4| 87-106 　| UniProt, Protein sequence alignment, PDB   |
