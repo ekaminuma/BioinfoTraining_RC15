@@ -30,10 +30,10 @@
 |16回目  | [2015/12/7](151207.md)  11:00-12:00  |3 | 80-86 　|Blast results, Similarity matrix, Pattern finding  |
 |17回目  | [2015/12/21](151221.md)  11:00-12:00   |4| 87-106 　| UniProt, Protein sequence alignment, PDB   |
 |18回目  | [2016/1/8](160108.md)  11:00-12:00  |7| 195-210 　| MassSpectrum, m/z ratio, Intensity, Bruker format |
+|19回目  | [2016/1/18](160118.md)　11:00-12:00 |7 | 211-223  | Peak detection, Peptide identification, Protein quantification analysis |
 
 開催予定日
 
-- 19回目 2016/1/18　 11:00-12:00
 - 20回目 2016/2/1　 11:00-12:00
 - 21回目 2016/2/15　 11:00-12:00
 - 22回目 2016/3/7　 11:00-12:00
