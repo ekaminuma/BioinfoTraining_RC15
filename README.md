@@ -34,7 +34,7 @@
 |20回目  | [2016/2/1](160201.md)　11:00-12:00 | 7,6 | 224-231,155-159  | SNP association analysis(single SNP)  |
 |21回目  | [2016/3/7](160307.md)　11:00-12:00 | 6 | 160-168  | SNP association analysis(Multiple SNPs, Genome-wide)    |
 |22回目  | [2016/3/22](160322.md)　11:00-12:00 |6 | 168-175  | Missing Call Rate, GWAS data format |
-|23回目  | [2016/4/11](160411.md)　11:00-12:00 | * | *   | 初回参加者向け説明：Instruction Only  |
+|23回目  | 2016/4/11 11:00-12:00 | * | *   | 初回参加者向け説明：Instruction Only  |
 |24回目  | [2016/4/25](160425.md)　11:00-12:00 | 6 | 176-  | |
 
 
