@@ -31,12 +31,16 @@
 |17回目  | [2015/12/21](151221.md)  11:00-12:00   |4| 87-106 　| UniProt, Protein sequence alignment, PDB   |
 |18回目  | [2016/1/8](160108.md)  11:00-12:00  |7| 195-210 　| MassSpectrum, m/z ratio, Intensity, Bruker format |
 |19回目  | [2016/1/18](160118.md)　11:00-12:00 |7 | 211-223  | Peak detection, Peptide identification, Protein quantification analysis |
+|20回目  | [2016/2/1](160201.md)　11:00-12:00 | 7,6 | 224-231,155-159  | SNP association analysis(single SNP)  |
+|21回目  | [2016/3/7](160307.md)　11:00-12:00 | 6 | 160-168  | SNP association analysis(Multiple SNPs, Genome-wide)    |
+|22回目  | [2016/3/22](160322.md)　11:00-12:00 |6 | 168-175  | Missing Call Rate, GWAS data format |
+|23回目  | [2016/4/11](160411.md)　11:00-12:00 | * | *   | 初回参加者向け説明：Instruction Only  |
+|24回目  | [2016/4/25](160425.md)　11:00-12:00 | 6 | 176-  | |
+
 
 開催予定日
 
-- 20回目 2016/2/1　 11:00-12:00
-- 21回目 2016/2/15　 11:00-12:00
-- 22回目 2016/3/7　 11:00-12:00
-- 23回目 2016/3/22　 11:00-12:00
+- 24回目 2016/4/25 11:00-12:00
+- 25回目 2016/5/?　 11:00-12:00
 
 
