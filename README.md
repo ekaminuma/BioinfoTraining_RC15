@@ -35,12 +35,13 @@
 |21回目  | [2016/3/7](160307.md)　11:00-12:00 | 6 | 160-168  | SNP association analysis(multiple SNPs, genome-wide)    |
 |22回目  | [2016/3/25](160325.md)　11:00-12:00 |6 | 168-175  | Missing Call Rate, GWAS data format |
 |23回目  | 2016/4/11 11:00-12:00 | * | *   | 初回参加者向け説明：Instruction Only  |
-|24回目  | [2016/4/25](160425.md)　11:00-12:00 | 6 | 176-  | SNP annotation, Hardy-Weinberg equilibrium |
+|24回目  | [2016/4/25](160425.md)　11:00-12:00 | 6 | 176-181 | SNP annotation, Hardy-Weinberg equilibrium |
+|25回目  | [2016/5/16](160516.md)　11:00-12:00 | 6 | 182-193 | CNV association, Visualization in GWAS studies |
 
 
 開催予定日
 
-- 24回目 2016/4/25 11:00-12:00
-- 25回目 2016/5/?　 11:00-12:00
+- 25回目 2016/5/16 11:00-12:00
+- 26回目 2016/5/30 11:00-12:00
 
 
