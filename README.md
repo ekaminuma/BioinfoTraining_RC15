@@ -1,5 +1,5 @@
 # BioinfoTraining15  ![image](./img/GOnetwork1.png )
-「Bioinformatics with R Cookbook」2015年度輪読会
+「Bioinformatics with R Cookbook」2015-16年度輪読会
 
 初心者向けBioinformatics輪読演習を行います(NIG遺伝研大量遺伝　神沼)
 
