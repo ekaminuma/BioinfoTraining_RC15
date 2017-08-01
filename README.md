@@ -37,11 +37,11 @@
 |23回目  | 2016/4/11 11:00-12:00 | * | *   | 初回参加者向け説明：Instruction Only  |
 |24回目  | [2016/4/25](160425.md)　11:00-12:00 | 6 | 176-181 | SNP annotation, Hardy-Weinberg equilibrium |
 |25回目  | [2016/5/16](160516.md)　11:00-12:00 | 6 | 182-194 | CNV association, Visualization in GWAS studies |
-|26回目  | [2016/5/30](160530.md)　11:00-12:00 | 6 | 233-240 | Analyzing NGS Data, SRA database, FASTQ files |
-|27回目  | [2016/6/15](160615.md)　11:00-12:00 | 6 | 241-250 | Read alignment, Preprocessing, RNAseq wt edgeR |
-|28回目  | [2016/6/27](160627.md)　11:00-12:00 | 6 | 251-254 | Differential analysis of NGS data wt limma  |
-|29回目  | [2016/7/13](160713.md)　11:00-12:00 | 6 | 255-259 | GO enrichment for RNAseq data, KEGG enrichment |
-|30回目  | [2016/8/1](160801.md)　11:00-12:00 | 6 | 260-266 | methylation data, chipseq data |
+|26回目  | [2016/5/30](160530.md)　11:00-12:00 | 8 | 233-240 | Analyzing NGS Data, SRA database, FASTQ files |
+|27回目  | [2016/6/15](160615.md)　11:00-12:00 | 8 | 241-250 | Read alignment, Preprocessing, RNAseq wt edgeR |
+|28回目  | [2016/6/27](160627.md)　11:00-12:00 | 8 | 251-254 | Differential analysis of NGS data wt limma  |
+|29回目  | [2016/7/13](160713.md)　11:00-12:00 | 8 | 255-259 | GO enrichment for RNAseq data, KEGG enrichment |
+|30回目  | [2016/8/1](160801.md)　11:00-12:00 | 8 | 260-266 | methylation data, chipseq data |
 
 
 
